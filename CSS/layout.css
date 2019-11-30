@@ -1,5 +1,11 @@
 /* Extra small devices (portrait phones, less than 576px) */
 
+
+/* RGB colors
+blue: 30, 161, 199
+sand: 206, 142, 94
+*/
+
 nav>a {
     width: 30%;
 }
@@ -10,6 +16,10 @@ nav>a>img {
 
 img {
     width: 70%;
+}
+
+section {
+    min-height: 500px;
 }
 
 
