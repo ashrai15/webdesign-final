@@ -6,11 +6,11 @@ blue: 30, 161, 199
 sand: 206, 142, 94
 */
 
-nav>a {
+nav > a {
     width: 30%;
 }
 
-nav>a>img {
+nav > a > img {
     padding-left: 10%;
 }
 
