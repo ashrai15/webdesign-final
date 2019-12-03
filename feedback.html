@@ -42,7 +42,31 @@
             <div class="col"></div>
         </div>
     </div>
-    <section></section>
+    <section>
+        <div class="col">
+            <form id="feedbackForm" action="https://www.uu.edu/forms/WBFeedbackAction.cfm" method="POST">
+                <legend>Fill out our Feedback Form.</legend>
+
+                <input name="Email" id="hiddenemail" type="hidden">
+                <input name="Website" id="hiddenwebsite" type="hidden">
+
+                <div class="formRow">
+                    <label for="username">Username</label>
+                    <input name="UserName" id="username" type="text">
+                </div>
+
+                <div class="formRow">
+                    <label for="mail">E-mail</label>
+                    <input name="UserEmail" id="mail" type="email">
+                </div>
+
+                <div class="formRow">
+                    <label for="comments">Additional Comments</label>
+                    <input name="UserComments" id="comments" type="textarea">
+                </div>
+            </form>
+        </div>
+    </section>
     <footer>
         <hr />
         <div class="container">
@@ -51,29 +75,7 @@
                 <div class="col"><a href="contactUs.html">Contact Us</a></div>
             </div>
 
-            <div class="col">
-                <form id="feedbackForm" action="https://www.uu.edu/forms/WBFeedbackAction.cfm" method="POST">
-                    <legend>Fill out our Feedback Form.</legend>
 
-                    <input name="Email" id="hiddenemail" type="hidden">
-                    <input name="Website" id="hiddenwebsite" type="hidden">
-
-                    <div class="formRow">
-                        <label for="username">Username</label>
-                        <input name="UserName" id="username" type="text">
-                    </div>
-
-                    <div class="formRow">
-                        <label for="mail">E-mail</label>
-                        <input name="UserEmail" id="mail" type="email">
-                    </div>
-
-                    <div class="formRow">
-                        <label for="comments">Additional Comments</label>
-                        <input name="UserComments" id="comments" type="textarea">
-                    </div>
-                </form>
-            </div>
 
 
         </div>
