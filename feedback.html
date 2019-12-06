@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!--you tried our stuff? how would you rate it? do you like it?-->
 
 <head>
@@ -31,12 +30,14 @@
                     <li><a class="nav-link" href="prodCardStock.html">Cardstock</a></li>
                     <li><a class="nav-link" href="prodPaper.html">Paper</a></li>
                     <li><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="feedback.html">Give us Feedback</a></li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="feedback.html">Give us Feedback</a>
+                    </li>
                     <li><a class="nav-link" href="contactUs.html">Contact Us</a></li>
                     <li><a class="nav-link" href="login.html">Login</a></li>
                     <li>
                         <a class="nav-link" href="cart.html">
-                            <img src="images/shopping-basket-icon-614x460.png" alt="">
+                            <img src="images/shopping-basket-icon-614x460.png" alt="" />
                         </a>
                     </li>
                 </ul>
@@ -48,7 +49,31 @@
             <div class="col"></div>
         </div>
     </div>
-    <section></section>
+    <section>
+        <div class="col">
+            <form id="feedbackForm" action="https://www.uu.edu/forms/WBFeedbackAction.cfm" method="POST">
+                <legend>Fill out our Feedback Form.</legend>
+
+                <input name="Email" id="hiddenemail" type="hidden" />
+                <input name="Website" id="hiddenwebsite" type="hidden" />
+
+                <div class="formRow">
+                    <label for="username">Username</label>
+                    <input name="UserName" id="username" type="text" />
+                </div>
+
+                <div class="formRow">
+                    <label for="mail">E-mail</label>
+                    <input name="UserEmail" id="mail" type="email" />
+                </div>
+
+                <div class="formRow">
+                    <label for="comments">Additional Comments</label>
+                    <input name="UserComments" id="comments" type="textarea" />
+                </div>
+            </form>
+        </div>
+    </section>
     <footer>
         <hr />
         <div class="container">
