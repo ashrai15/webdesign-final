@@ -1,0 +1,27 @@
+/*
+201018, 201034, 201036
+background color rgb(233, 226, 208)
+text/nav color rgb(91, 113, 100)
+*/
+/*
+201020
+background color rgb(255, 255, 255)
+text color rgb(53, 53, 53)
+*/
+/*
+201024
+background color rgb(255, 255, 255)
+*/
+/*
+201027 telling who is therapist
+background color top rgb(255, 255, 255)
+background color bottom rgb(233, 238, 241)
+*/
+
+body {
+    background-color: rgb(233, 226, 208);
+}
+
+header {
+    background-color: rgb(91, 113, 100);
+}
