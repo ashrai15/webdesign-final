@@ -25,30 +25,31 @@ var usersRef = db.collection("user");
 var user = firebase.auth().currentUser;
 var  email, cart, cartTotal, uid;
 
-if (user != null) {
-  email = user.email;
-  uid = user.uid;
-}
+
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
      var userdoc = db.collection("user").doc(user.uid);
 
-     userdoc.get().then(function(doc) {
-      if (doc.exists) {
-        console.log("Document data:", doc.data());
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
+    userdoc.get().then(function(doc) {
+        if (doc.exists) {
+          console.log("Document data:", doc.data());
+          email = doc.data().email;
+          cartTotal = doc.data().total_price_cart;
+          cart = doc.data().cart;
+          uid = doc.id;
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+      }).catch(function(error) {
+          console.log("Error getting document:", error);
+      });
+          // ...
+    } else {
+      window.location.replace(login.html)
     }
-}).catch(function(error) {
-    console.log("Error getting document:", error);
-});
-    // ...
-  } else {
-     window.location.replace(login.html)
-  }
 });
 
 document.getElementById("register").addEventListener('submit', createAccount);
@@ -113,27 +114,31 @@ function signOut(e){
 
 }
 
-function getData(){
-  
+function processOrder() {
 
-  if(uid === null){
-    console.log("Empty Cart");
-  }else{
-    console.log("sign-in");
-//     var docRef = db.collection("cities").doc("SF");
+  let firstName = getInputVal("first-name");
+  let lastName = getInputVal("last-name");
+  let houseAddress=getInputVal("shipping-address-ln1");
+  let secondAddressLine = getInputVal("shipping-address-ln2");
+  let city = getInputVal("city");
+  let state = getInputVal("state");
+  let zipcode = getInputVal("zip-code");
 
-// docRef.get().then(function(doc) {
-//     if (doc.exists) {
-//         console.log("Document data:", doc.data());
-//     } else {
-//         // doc.data() will be undefined in this case
-//         console.log("No such document!");
-//     }
-// }).catch(function(error) {
-//     console.log("Error getting document:", error);
-// });
-  }
 
+  db.collection('orders').add({
+    first_name: firstName,
+    last_name: lastName,
+    house_address: houseAddress,
+    second_address_line: secondAddressLine,
+    city: city,
+    state: state,
+    zip_code:zipcode,
+    user: uid
+  }).then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+  }).catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
 }
 
 

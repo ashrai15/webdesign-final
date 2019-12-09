@@ -36,6 +36,7 @@
             src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
         <script defer src="javascript/app.js"></script>
+        <script defer src="javascript/stripe.js"></script>
 
         <style>
             .StripeElement {
@@ -118,25 +119,105 @@
         <section class="container">
 
 
+            <h1 id="cart-greeting">
 
+            </h1>
 
             <form action="/charge" method="post" id="payment-form">
                 <div class="form-row">
-                    <label for="card-element">
-                        Credit or debit card
-                    </label>
-                    <div id="card-element">
-                        <!-- A Stripe Element will be inserted here. -->
+                    <div class="form-group col">
+                        <label for="first-name">
+                            First Name *
+                        </label>
+                        <input type="text" class="form-control"
+                            name="first-name" id="first-name"
+                            aria-describedby="helpId" placeholder="First Name"
+                            required>
+                        <small id="helpId" class="form-text text-muted">
+                            Please enter just your first name as you want it to
+                            appear on your shippping label.
+                        </small>
                     </div>
-
+                    <div class="form-group col">
+                        <label for="last-name">
+                            Last Name *
+                        </label>
+                        <input type="text" class="form-control"
+                            name="last-name" id="last-name"
+                            aria-describedby="helpId" placeholder="Last Name"
+                            required>
+                        <small id="helpId" class="form-text text-muted">
+                            Please enter your last name as it will appear on
+                            your
+                            shipping label.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-address-ln1">
+                        Shipping Address *
+                    </label>
+                    <input type="text" class="form-control"
+                        name="shipping-address-ln1" id="shipping-address-ln1"
+                        aria-describedby="helpId"
+                        placeholder="Shipping Address" required>
+                    <small id="helpId" class="form-text text-muted">
+                        Shipping address or home address.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-address-ln2">Shipping Second Line
+                        (optional)</label>
+                    <input type="text" class="form-control"
+                        name="shipping-address-ln2" id="shipping-address-ln2"
+                        aria-describedby="helpId" placeholder="PO Box Number">
+                    <small id="helpId" class="form-text text-muted">Second Row
+                        for an address.</small>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="city">City *</label>
+                        <input type="text" class="form-control" name="city"
+                            id="city" aria-describedby="helpId"
+                            placeholder="City" required>
+                        <small id="helpId" class="form-text text-muted">City as
+                            it appears in your address.</small>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="state">State *</label>
+                        <input type="text" class="form-control" name="state"
+                            id="state" aria-describedby="helpId"
+                            placeholder="State" maxlength="2" required>
+                        <small id="helpId"
+                            class="form-text text-muted">State</small>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="zip-code">zipcode *</label>
+                        <input type="text" class="form-control" name="zip-code"
+                            id="zip-code" aria-describedby="helpId"
+                            placeholder="Zipcode" maxlength="5" required>
+                        <small id="helpId" class="form-text text-muted">local
+                            zipcode</small>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="card-element">
+                            Credit or debit card
+                        </label>
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+                        </div>
+                    </div>
                     <!-- Used to display form errors. -->
                     <div id="card-errors" role="alert"></div>
-                </div>
 
-                <button>Submit Payment</button>
+                </div>
+                <button class="btn btn-primary">Submit Payment</button>
+
             </form>
 
-            <script src="javascript/stripe.js"></script>
+
         </section>
         <footer>
             <hr />
