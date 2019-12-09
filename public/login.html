@@ -17,7 +17,7 @@
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous" />
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script
             src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
 
@@ -31,7 +31,9 @@
             src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script
             src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
-        <script src="javascript/app.js"></script><script src="https://js.stripe.com/v3/"></script></head>
+        <script defer src="javascript/app.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+    </head>
 
     <body>
         <header>
@@ -80,8 +82,8 @@
             </div>
         </div>
         <section>
-            .<div class="container">
-                <form>
+            <div class="container">
+                <form id="login-form">
                     <h1>Login</h1>
                     <div class="form-group">
                         <label for="login-user-name">User Name</label>
