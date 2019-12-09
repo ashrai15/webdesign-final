@@ -19,8 +19,7 @@ firebase.firestore();
 let db = firebase.firestore();
 // firebase.database();
 
-var stripe = Stripe('pk_test_WVstOcw3jGMpmSMRSB5x4SKq00yTnhaT5r');
-var elements = stripe.elements();
+
 var usersRef = db.collection("user");
 
 var user = firebase.auth().currentUser;
