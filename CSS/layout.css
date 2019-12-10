@@ -26,6 +26,12 @@ ul>li {
     padding: 7px;
 }
 
+form {
+    margin: auto auto;
+}
+
+#product-section {}
+
 
 /* No media query for 'xs' since this is the default in Bootstrap */
 
