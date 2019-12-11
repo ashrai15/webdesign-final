@@ -66,6 +66,8 @@ function buildCart() {
 		card.innerHTML = inhtml;
 		div.appendChild(card);
 		currentCart.appendChild(div);
+
+		document.getElementById('total-price').innerText = `Total Price $${cartTotal}`;
 	});
 }
 
