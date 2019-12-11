@@ -28,10 +28,13 @@ let   uid, email, cart, cartTotal;
 
 // eslint-disable-next-line no-unused-vars
 function buildCart() {
-	email;
-	cart;
-	cartTotal;
+	cart.array.forEach(element => {
+		let currentCart = document.getElementById('current-cart');
+		currentCart.appendChild(div);
+	});
 }
+
+
 
 firebase.auth().onAuthStateChanged(function(user) {
 	if (user) {
@@ -45,49 +48,49 @@ firebase.auth().onAuthStateChanged(function(user) {
 				cartTotal = doc.data().total_price_cart;
 				cart = doc.data().cart;
 				uid = doc.id;
-			} else {
+			} else 
 				// doc.data() will be undefined in this case
 				console.log('No such document!');
-			}
+			
 		}).catch(function(error) {
 			console.log('Error getting document:', error);
 		});
 		// ...
-	} else {
+	} else 
 		window.location.replace('login.html');
-	}
+	
 });
 
-if(document.getElementById('register') != null) {
+if(document.getElementById('register') != null) 
 	document.getElementById('register').addEventListener('submit', createAccount);
-}
-if(document.getElementById('login-form') != null) {
+
+if(document.getElementById('login-form') != null) 
 	document.getElementById('login-form').addEventListener('submit', signin);
-}
+
 function createAccount(e) {
 	e.preventDefault();
 
 	let email = getInputVal('emailCreate');
 	let password = getInputVal('passwordCreate');
 	let passwordCopy = getInputVal('passwordCopy');
-	if (password === passwordCopy) {
+	if (password === passwordCopy) 
 		firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
 			// Handle Errors here.
 			let errorCode = error.code;
 			let errorMessage = error.message;
 			// [START_EXCLUDE]
-			if (errorCode == 'auth/weak-password') {
+			if (errorCode == 'auth/weak-password') 
 				alert('The password is too weak.');
-			} else {
+			else 
 				alert(errorMessage);
-			}
+			
 			console.log(error);
 			// [END_EXCLUDE]
       
 		});
-	} else {
+	else 
 		window.alert('Your passwords must be identical.');
-	}
+	
   
 }
 
@@ -103,11 +106,11 @@ function signin(e){
 	
 			let errorMessage = error.message;
     
-			if (errorMessage != null) {
+			if (errorMessage != null) 
 				alert(errorMessage);
-			}else{
+			else
 				alert('welcome');
-			}
+			
   
 			// ...
 		});
