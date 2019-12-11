@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--explaining why our cardstock is better than any competitor w/i 50 mi-->
+<!--special orders, big orders, self-inclusive subjects-->
 
 <head>
     <!--Required meta tags-->
@@ -15,27 +15,41 @@
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-</head>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script
+            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+                 https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script
+            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-performance.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+        <script src="javascript/app.js"></script><script src="https://js.stripe.com/v3/"></script></head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li><a class="nav-link" href="about.html">About</a></li>
                     <li><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="prodCardStock.html">Cardstock</a></li>
+                    <li><a class="nav-link" href="prodCardStock.html">Cardstock</a></li>
                     <li><a class="nav-link" href="prodPaper.html">Paper</a></li>
                     <li><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li><a class="nav-link" href="feedback.html">Give us Feedback</a></li>
-                    <li><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                    <li><a class="nav-link active" href="contactUs.html">Contact Us</a></li>
                     <li><a class="nav-link" href="login.html">Login</a></li>
                     <li>
-                        <a class="nav-link" href="cart.html">
+                        <a class="nav-link" href="checkout.html">
                             <img src="images/shopping-basket-icon-614x460.png" alt="">
                         </a>
                     </li>
@@ -52,7 +66,7 @@
     <footer>
         <hr />
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col">Follow us on Social</div>
                 <div class="col"><a href="contactUs.html">Contact Us</a></div>
             </div>
