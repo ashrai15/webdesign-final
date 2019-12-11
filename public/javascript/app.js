@@ -28,9 +28,46 @@ let   uid, email, cart, cartTotal;
 
 // eslint-disable-next-line no-unused-vars
 function buildCart() {
-	cart.array.forEach(element => {
+	cart.forEach(element => {
+		console.log('Element'+element);
+		
 		let currentCart = document.getElementById('current-cart');
+		let div = document.createElement('li');
+		let card = document.createElement('div');
+		card.classList.add('card');
+
+		
+
+		let inhtml = ` <li>
+                    <div class="card">
+                        <div class="row">
+                            <img src="../images/cards-icon-red.png" alt=""
+                                srcset="" class="col-2">
+                            <div class="col">
+                                <div class="row card-title">
+                                    ${element}
+                                </div>
+                                <div class="row card-body">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Quam quibusdam minus
+                                    distinctio ducimus consequatur possimus
+                                    corrupti velit cum maxime repudiandae
+                                    pariatur quis atque vitae sint excepturi
+                                    error, vel ipsa placeat!
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <strong>Price</strong>
+                            </div>
+                        </div>
+                    </div>
+                </li>`;
+
+		card.innerHTML = inhtml;
+		div.appendChild(card);
 		currentCart.appendChild(div);
+
+		document.getElementById('total-price').innerText = `Total Price $${cartTotal}`;
 	});
 }
 
@@ -56,8 +93,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 			console.log('Error getting document:', error);
 		});
 		// ...
-	} else 
+	} else if(window.location =='cart.html' || 
+	window.location == 'checkout.html') 
 		window.location.replace('login.html');
+	
 	
 });
 
