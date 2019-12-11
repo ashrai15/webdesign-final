@@ -1,0 +1,61 @@
+/* Extra small devices (portrait phones, less than 576px) */
+
+
+/* RGB colors
+blue: 30, 161, 199
+sand: 206, 142, 94
+*/
+
+nav>a {
+    width: 30%;
+
+}
+
+.nav-item>a {
+    font-size: 18px;
+}
+
+nav>a>img {
+    padding-left: 10%;
+}
+
+img {
+    width: 70%;
+}
+
+section {
+    min-height: 500px;
+}
+
+ul>li {
+    padding: 7px;
+}
+
+form {
+    margin: auto auto;
+}
+
+#product-section {}
+
+
+/* No media query for 'xs' since this is the default in Bootstrap */
+
+
+/* Small devices (sm) (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {}
+
+
+/* Medium devices (md) (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+
+/* Large devices (lg) (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* Extra large devices (xl) (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--becomes list of available things that people can buy-->
+
+<head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!--Student-made CSS-->
+    <link rel="stylesheet" href="CSS/layout.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/print.css" />
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script
+            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+                 https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script
+            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-performance.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+        <script src="javascript/app.js"></script><script src="https://js.stripe.com/v3/"></script></head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="products.html">Products</a></li>
+                    <li><a class="nav-link" href="prodCardStock.html">Cardstock</a></li>
+                    <li><a class="nav-link" href="prodPaper.html">Paper</a></li>
+                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li><a class="nav-link" href="feedback.html">Give us Feedback</a></li>
+                    <li><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                    <li><a class="nav-link" href="login.html">Login</a></li>
+                    <li>
+                        <a class="nav-link" href="checkout.html">
+                            <img src="images/shopping-basket-icon-614x460.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>
+                    We offer a wide array of cardstocks and holiday cards.
+                </h2>
+            </div>
+        </div>
+    </div>
+    <section class="container" id="product-section">
+
+        <div class="card-deck">
+            <div class="card">
+                <img src="images/premium-cardstock-1.jpg" alt="" srcset="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        HandCrafted Parchment
+                    </h5>
+                    <p class="card-text">
+                        Our parchment is hand crafted from our refinement processess of wood & grasses mixed together.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/premium-cardstock-2.jpg" alt="" srcset="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Great Seasonal Cards
+                    </h5>
+                    <p class="card-text">
+                        Personalized cards and photos based on the time of year and upon request.
+                        <br>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="mute-text">
+            Of Corse all of our cards can be gift wrapped to suit your needs.
+        </p>
+
+    </section>
+
+
+
+
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="row">
+                <div class="col">Follow us on Social</div>
+                <div class="col"><a href="contactUs.html">Contact Us</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Optional JavaScript-->
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
