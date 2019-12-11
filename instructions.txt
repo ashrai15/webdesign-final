@@ -1,17 +1,9 @@
-Presentation Critique: Dec. 12, 2-4pm
-Due: Dec. 12, 4pm
-
-For your final project, you may choose any topic (preferably something that will be used).  You may work in a group of two or alone on this project.  Name the homepage index.html and submit as a .zip file in Canvas. The site should include the following (each bullet is worth 10 points):
-
-- Site must contain at least 7 pages (at least one page should not appear in the main navigation) with consistent navigation, unique titles and at least one unique meta tag per page. Organize your files into folders with only your pages appearing at the root level.  For example, create folders for css, js, images, etc.  Remember that there should be no spaces in any folder or file names.
+-unique titles and at least one unique meta tag per page. Organize your files into folders with only your pages appearing at the root level.  For example, create folders for css, js, images, etc.  Remember that there should be no spaces in any folder or file names.
 
 - Write your site with HTML5 structuring tags (at least header, nav, section and footer) and validate with http://validator.w3.org/nu/ (Links to an external site.). Each error will be one point off.
 
 - Each page should reach WCAG 2.0 Level AA.  Validate with http://achecker.ca/checker/ (Links to an external site.) and fix Known and Likely Problems. Do you best to fix issues that are labeled as Potential. Each Known error will be one point off.
 
-- Add an external style sheet for print linked to each page of your site that should drop out the main navigation and any others items that aren’t the main content of the page (i.e. asides that are the same on every page). I want your pages optimized for printing. While Bootstrap may include some printing enhancements, I want this separate file included.
-
-- You should achieve your responsive design using the grid from Bootstrap to produce this project – breaking your page into as many as 12 columns.  We will look at your site at the various breakpoints (Everything from your page should be visible at these sizes without scrolling the page right or left). You may not use an established template – you must start from the basic Bootstrap.
 
 - You should include one example of a transition and an animation somewhere in the site in a meaningful way. Transitions might work well in navigation, but look to use an animation in a featured area.
 
@@ -38,7 +30,3 @@ For your final project, you may choose any topic (preferably something that will
 Extra Credit:
 
 - Include an example of parallax scrolling (involves background images shifting up or down as you scroll). This usually works best on your homepage. +5
-
-- Include one example of an API (Google Maps API, Twitter API, Graph API, etc.) +5
-
-idea is to sell postcards/cardstock of nature in charleston SC, or family pictures
