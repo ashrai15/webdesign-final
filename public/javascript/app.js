@@ -93,8 +93,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 			console.log('Error getting document:', error);
 		});
 		// ...
-	} else 
+	} else if(window.location =='cart.html' || 
+	window.location == 'checkout.html') 
 		window.location.replace('login.html');
+	
 	
 });
 
