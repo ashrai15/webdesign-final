@@ -18,7 +18,20 @@ firebase.firestore();
 let db = firebase.firestore();
 // firebase.database();
 
+<<
+<<
+<< < HEAD
+let uid, email, cart, cartTotal; ===
+===
+=
+
+
+
+
 let uid, email, cart, cartTotal;
+let globalUser; >>>
+>>>
+> b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
 
 // eslint-disable-next-line no-unused-vars
 function buildCart() {
@@ -65,7 +78,8 @@ function buildCart() {
     });
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function(user) { <<
+    << << < HEAD
     if (user) {
         // User is signed in.
         let userdoc = db.collection('user').doc(user.uid);
@@ -91,7 +105,38 @@ firebase.auth().onAuthStateChanged(function(user) {
         window.location.href.includes('cart.html') ||
         window.location.href.includes('checkout.html')
     )
+        window.location.replace('login.html'); ===
+    ===
+    =
+    globalUser = user;
+    if (user) {
+        uid = user.uid;
+        // User is signed in.
+        let userdoc = db.collection('user').doc(user.uid);
+
+        userdoc.get().then(function(doc) {
+            if (doc.exists) {
+                console.log('Document data:', doc.data());
+                email = doc.data().email;
+                cartTotal = doc.data().total_price_cart;
+                cart = doc.data().cart;
+            } else
+            // doc.data() will be undefined in this case
+                console.log('No such document!');
+
+        }).catch(function(error) {
+            console.log('Error getting document:', error);
+        });
+        // ...
+    } else if (window.location.href.includes('cart.html') ||
+        window.location.href.includes('checkout.html')) {
         window.location.replace('login.html');
+        uid = null;
+    }
+
+    >>>
+    >>>
+    > b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
 });
 
 if (document.getElementById('register') != null)
@@ -125,8 +170,40 @@ function createAccount(e) {
     else window.alert('Your passwords must be identical.');
 }
 
+<<
+<<
+<< < HEAD
+
 function signin(e) {
-    e.preventDefault();
+    e.preventDefault(); ===
+    ===
+    =
+    function signin(e) {
+        e.preventDefault();
+
+        let email = getInputVal('login-user-name');
+        let password = getInputVal('login-user-password');
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .catch(function(error) {
+                // Handle Errors here.
+
+                let errorMessage = error.message;
+
+                if (errorMessage != null)
+                    console.log(errorMessage);
+                else
+                    window.replace('index.html');
+
+
+                // ...
+            });
+        firebase.auth().onAuthStateChanged(function(user) {
+            console.log(user);
+        });
+    } >>>
+    >>>
+    > b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
 
     let email = getInputVal('login-user-name');
     let password = getInputVal('login-user-password');
@@ -185,3 +262,14 @@ function processOrder() {
 function getInputVal(id) {
     return document.getElementById(id).value;
 }
+// eslint-disable-next-line no-unused-vars
+function addToCart(product) {
+    if (globalUser) {
+        let docID = db.collection('user').doc(uid);
+        console.log(docID.data);
+        cartTotal += 5;
+        docID.update({
+            total_price_cart: cartTotal,
+            cart: firebase.firestore.FieldValue.arrayUnion(product)
+        });
+    } else window.location.replace('login.html');
