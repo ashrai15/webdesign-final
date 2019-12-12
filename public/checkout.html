@@ -70,39 +70,39 @@
                 <img src="images/logo.png" class="img-thumbnail" alt="Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="row">
                 <div class="collapse navbar-collapse col-auto" id="navbarSupportedContent">
                     <ul class="navbar-nav" style="padding-right: 0px; margin-right: 0;">
                         <li class="nav-item">
                             <a class="nav-link" href="about.html"> About
-                                        </a>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="products.html">Products
-                                        </a>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="prodCardStock.html">Cardstock </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="prodPaper.html">Paper
-                                        </a></li>
+                            </a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="pricing.html">Pricing
-                                        </a>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="feedback.html">Give
-                                            us
-                                            Feedback </a></li>
+                                us
+                                Feedback </a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="contactUs.html">Contact
-                                            Us </a></li>
+                                Us </a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">Login
-                                        </a>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -130,29 +130,29 @@
             <div class="form-row">
                 <div class="form-group col">
                     <label for="first-name">
-                            First Name *
-                        </label>
+                        First Name *
+                    </label>
                     <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First Name" required>
 
                 </div>
                 <div class="form-group col">
                     <label for="last-name">
-                            Last Name *
-                        </label>
+                        Last Name *
+                    </label>
                     <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last Name" required>
 
                 </div>
             </div>
             <div class="form-group">
                 <label for="shipping-address-ln1">
-                        Shipping Address *
-                    </label>
+                    Shipping Address *
+                </label>
                 <input type="text" class="form-control" name="shipping-address-ln1" id="shipping-address-ln1" placeholder="Shipping Address" required>
 
             </div>
             <div class="form-group">
                 <label for="shipping-address-ln2">Shipping Second Line
-                        (optional)</label>
+                    (optional)</label>
                 <input type="text" class="form-control" name="shipping-address-ln2" id="shipping-address-ln2" placeholder="PO Box Number">
 
             </div>
@@ -176,9 +176,9 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="card-element">
-                            <!-- this is not an error in w3 validator. it will say it is because this element isn't visible but that is because the card-element is written by javascript in the script.js and I can't write it as html. -->
-                            Credit or debit card
-                        </label>
+                        <!-- this is not an error in w3 validator. it will say it is because this element isn't visible but that is because the card-element is written by javascript in the script.js and I can't write it as html. -->
+                        Credit or debit card
+                    </label>
                     <div id="card-element">
                         <!-- A Stripe Element will be inserted here. -->
                     </div>
@@ -187,7 +187,32 @@
                 <div id="card-errors" role="alert"></div>
 
             </div>
-            <button class="btn btn-primary">Submit Payment</button>
+            <!-- <button class="btn btn-primary">Submit Payment</button> -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" onclick="processOrder()">
+                Submit
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Checkout Recieved</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea veniam quis quia saepe. Quam nisi, in laboriosam nihil unde natus earum rem voluptatibus, nesciunt excepturi dolorum dolor modi non iste!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Continue</button>
+                            <button type="button" class="btn btn-primary">go back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </form>
 
@@ -197,7 +222,8 @@
         <hr />
         <div class="container">
             <div class="row">
-                <div class="col" style="align-content: center;"><a href="https://www.instagram.com/jon.speaks/">Follow us on Instagram!</a></div>
+                <div class="col" style="align-content: center;"><a href="https://www.instagram.com/jon.speaks/">Follow
+                        us on Instagram!</a></div>
                 <div class="col" style="align-content: center;"><a href="contactUs.html">Contact Us</a>
                 </div>
             </div>
