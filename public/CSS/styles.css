@@ -65,14 +65,24 @@ textarea:focus {
     height: 500px;
 }
 
-#animation1 {
-    animation-timing-function: ease-in;
-}
-
-#animation2 {
-    animation-timing-function: ease;
-}
-
+#animation1,
+#animation2,
 #animation3 {
-    animation-timing-function: ease-out
+    width: 500px;
+    height: 500px;
+    animation-name: sunset;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+/* Standard syntax */
+
+@keyframes sunset {
+    from {
+        background-image: url(../images/sunset-photo-1.jpg);
+    }
+    to {
+        background-image: url(../images/sunset-photo-2.jpg);
+    }
 }
