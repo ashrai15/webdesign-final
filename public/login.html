@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <!--different bundles and options that we have //base models //advanced models //subscription models-->
+
+    <head>
         <!--Required meta tags-->
         <meta charset="utf-8" />
         <meta name="viewport"
@@ -31,72 +33,69 @@
             src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script
             src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
-        <script defer src="javascript/app.js"></script>
+        <script src="javascript/app.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
-        <title>Login</title>
-</head>
+        <title>Pricing</title>
+    </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" class="img-thumbnail" alt="Logo" />
-            </a>
-            <button class="navbar-toggler" type="button"
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <a class="navbar-brand" href="index.html"><img
+                        src="images/logo.png" class="img-thumbnail"
+                        alt="Logo" /></a>
+                <button class="navbar-toggler" type="button"
                     data-toggle="collapse"
                     data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse"
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
                     id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li><a class="nav-link" href="products.html">Products</a></li>
-                    <li><a class="nav-link" href="prodCardStock.html">Cardstock</a></li>
-                    <li><a class="nav-link" href="prodPaper.html">Paper</a></li>
-                    <li><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li><a class="nav-link" href="feedback.html">Give us Feedback</a></li>
-                    <li><a class="nav-link" href="contactUs.html">Contact Us</a></li>
-                    <li><a class="nav-link active" href="login.html">Login</a></li>
-                    <li><a class="nav-link" href="cart.html">
-                        <img src="images/shopping-basket-icon-614x460.png" alt="Cart"></a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section>
-        <div class="container">
-            <form id="login-form">
-                <h1>Login to Continue</h1>
-                <div class="form-group">
-                    <label for="login-user-name">User Name</label>
-                    <input type="text" class="form-control"
-                            name="login-user-name" id="login-user-name"
-                            aria-describedby="helpId" placeholder="Username (e-mail)" />
+                    <ul class="navbar-nav mr-auto">
+                        <li><a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li><a class="nav-link"
+                                href="products.html">Products</a></li>
+                        <li><a class="nav-link"
+                                href="prodCardStock.html">Cardstock</a></li>
+                        <li><a class="nav-link" href="prodPaper.html">Paper</a>
+                        </li>
+                        <li class="nav-item active"><a class="nav-link"
+                                href="pricing.html">Pricing</a></li>
+                        <li><a class="nav-link" href="feedback.html">Give us
+                                Feedback</a></li>
+                        <li><a class="nav-link" href="contactUs.html">Contact
+                                Us</a></li>
+                        <li><a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="cart.html">
+                                <img src="images/shopping-basket-icon-614x460.png"
+                                    alt="">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="login-user-password">Password</label>
-                    <input type="password" class="form-control"
-                            name="login-user-password" id="login-user-password"
-                            placeholder="Password" />
-                </div>
-                <a href="createAccount.html">Don't Have an Account? Sign Up!</a><br />
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </section>
-    <footer>
-        <hr />
+            </nav>
+        </header>
         <div class="container">
             <div class="row">
-                <div class="col">Follow us on Social</div>
-                <div class="col"><a href="contactUs.html">Contact Us</a>
-                </div>
+                <div class="col"></div>
             </div>
         </div>
-    </footer>
+        <section></section>
+        <footer>
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="col">Follow us on Social</div>
+                    <div class="col"><a href="contactUs.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!--Optional JavaScript-->
         <!--jQuery first, then Popper.js, then Bootstrap JS-->
@@ -111,6 +110,6 @@
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-</body>
+    </body>
 
 </html>

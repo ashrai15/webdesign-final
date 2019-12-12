@@ -79,7 +79,8 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                 <a class="navbar-brand" href="index.html"><img
-                        src="images/logo.png" class="img-thumbnail" alt="Logo" /></a>
+                        src="images/logo.png" class="img-thumbnail"
+                        alt="Logo" /></a>
                 <button class="navbar-toggler" type="button"
                     data-toggle="collapse"
                     data-target="#navbarSupportedContent"
@@ -132,12 +133,9 @@
                         </label>
                         <input type="text" class="form-control"
                             name="first-name" id="first-name"
-                            aria-describedby="helpId" placeholder="First Name"
+                             placeholder="First Name"
                             required>
-                        <small id="helpId" class="form-text text-muted">
-                            Please enter just your first name as you want it to
-                            appear on your shippping label.
-                        </small>
+                        
                     </div>
                     <div class="form-group col">
                         <label for="last-name">
@@ -145,13 +143,9 @@
                         </label>
                         <input type="text" class="form-control"
                             name="last-name" id="last-name"
-                            aria-describedby="helpId" placeholder="Last Name"
+                             placeholder="Last Name"
                             required>
-                        <small id="helpId" class="form-text text-muted">
-                            Please enter your last name as it will appear on
-                            your
-                            shipping label.
-                        </small>
+                      
                     </div>
                 </div>
                 <div class="form-group">
@@ -160,50 +154,45 @@
                     </label>
                     <input type="text" class="form-control"
                         name="shipping-address-ln1" id="shipping-address-ln1"
-                        aria-describedby="helpId"
+                        
                         placeholder="Shipping Address" required>
-                    <small id="helpId" class="form-text text-muted">
-                        Shipping address or home address.
-                    </small>
+                    
                 </div>
                 <div class="form-group">
                     <label for="shipping-address-ln2">Shipping Second Line
                         (optional)</label>
                     <input type="text" class="form-control"
                         name="shipping-address-ln2" id="shipping-address-ln2"
-                        aria-describedby="helpId" placeholder="PO Box Number">
-                    <small id="helpId" class="form-text text-muted">Second Row
-                        for an address.</small>
+                         placeholder="PO Box Number">
+                   
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="city">City *</label>
                         <input type="text" class="form-control" name="city"
-                            id="city" aria-describedby="helpId"
+                            id="city" 
                             placeholder="City" required>
-                        <small id="helpId" class="form-text text-muted">City as
-                            it appears in your address.</small>
+                      
                     </div>
                     <div class="form-group col-md-2">
                         <label for="state">State *</label>
                         <input type="text" class="form-control" name="state"
-                            id="state" aria-describedby="helpId"
+                            id="state" 
                             placeholder="State" maxlength="2" required>
-                        <small id="helpId"
-                            class="form-text text-muted">State</small>
+                      
                     </div>
                     <div class="form-group col-md-2">
                         <label for="zip-code">zipcode *</label>
                         <input type="text" class="form-control" name="zip-code"
-                            id="zip-code" aria-describedby="helpId"
+                            id="zip-code" 
                             placeholder="Zipcode" maxlength="5" required>
-                        <small id="helpId" class="form-text text-muted">local
-                            zipcode</small>
+                       
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="card-element">
+                            <!-- this is not an error in w3 validator. it will say it is because this element isn't visible but that is because the card-element is written by javascript in the script.js and I can't write it as html. -->
                             Credit or debit card
                         </label>
                         <div id="card-element">
@@ -245,7 +234,5 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
     </body>
-
-</html>
 
 </html>
