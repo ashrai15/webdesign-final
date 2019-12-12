@@ -25,6 +25,7 @@ img {
 
 section {
     min-height: 500px;
+    padding-top: 55px;
 }
 
 ul>li {
