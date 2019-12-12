@@ -17,7 +17,7 @@
             crossorigin="anonymous" />
         <!--Required Title-->
         <title>Post of the Coast - Homepage</title>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script
             src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
 
@@ -31,14 +31,17 @@
             src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script
             src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
-        <script src="javascript/app.js"></script><script src="https://js.stripe.com/v3/"></script>
+        <script src="javascript/app.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
     </head>
 
     <body>
+
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" class="img-thumbnail" alt="Logo" />
+                    <img src="images/logo.png" class="img-thumbnail"
+                        alt="Logo" />
                 </a>
                 <button class="navbar-toggler" type="button"
                     data-toggle="collapse"
@@ -107,10 +110,17 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        <img src="./Images/beach-photo-1.jpg" alt="" />
+                    <div class="col-md-6">
+                        <img src="./images/beach-photo-1.jpg" alt=""
+                            style="width:100%;" />
                     </div>
-                    <div class="col-6"></div>
+                    <div class="col-md-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                src="https://www.youtube.com/embed/gPF_wUo4wYQ"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
