@@ -8,7 +8,6 @@ sand: 206, 142, 94
 
 nav>a {
     width: 30%;
-
 }
 
 .nav-item>a {
@@ -36,7 +35,9 @@ form {
     margin: auto auto;
 }
 
-#product-section {}
+footer {
+    min-height: 100px;
+}
 
 
 /* No media query for 'xs' since this is the default in Bootstrap */
