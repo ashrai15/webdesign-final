@@ -18,14 +18,8 @@ firebase.firestore();
 let db = firebase.firestore();
 // firebase.database();
 
-
 let uid, email, cart, cartTotal;
 
-
-
-
-
-let uid, email, cart, cartTotal;
 let globalUser;
 
 // eslint-disable-next-line no-unused-vars
@@ -74,7 +68,6 @@ function buildCart() {
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
-
     if (user) {
         // User is signed in.
         let userdoc = db.collection('user').doc(user.uid);
@@ -100,37 +93,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         window.location.href.includes('cart.html') ||
         window.location.href.includes('checkout.html')
     )
-        window.location.replace('login.html'); ===
-    ===
-    =
-    globalUser = user;
-    if (user) {
-        uid = user.uid;
-        // User is signed in.
-        let userdoc = db.collection('user').doc(user.uid);
-
-        userdoc.get().then(function(doc) {
-            if (doc.exists) {
-                console.log('Document data:', doc.data());
-                email = doc.data().email;
-                cartTotal = doc.data().total_price_cart;
-                cart = doc.data().cart;
-            } else
-            // doc.data() will be undefined in this case
-                console.log('No such document!');
-
-        }).catch(function(error) {
-            console.log('Error getting document:', error);
-        });
-        // ...
-    } else if (window.location.href.includes('cart.html') ||
-        window.location.href.includes('checkout.html')) {
         window.location.replace('login.html');
-        uid = null;
-    }
-
-
-
+    globalUser = user;
 });
 
 if (document.getElementById('register') != null)
@@ -164,36 +128,9 @@ function createAccount(e) {
     else window.alert('Your passwords must be identical.');
 }
 
-
-HEAD
-
 function signin(e) {
     e.preventDefault();
 
-    function signin(e) {
-        e.preventDefault();
-
-        let email = getInputVal('login-user-name');
-        let password = getInputVal('login-user-password');
-
-        firebase.auth().signInWithEmailAndPassword(email, password)
-            .catch(function(error) {
-                // Handle Errors here.
-
-                let errorMessage = error.message;
-
-                if (errorMessage != null)
-                    console.log(errorMessage);
-                else
-                    window.replace('index.html');
-
-
-                // ...
-            });
-        firebase.auth().onAuthStateChanged(function(user) {
-            console.log(user);
-        });
-    }
     let email = getInputVal('login-user-name');
     let password = getInputVal('login-user-password');
 
@@ -206,17 +143,17 @@ function signin(e) {
             let errorMessage = error.message;
 
             if (errorMessage != null) alert(errorMessage);
-            else alert('welcome');
+            else window.replace('index.html');
 
             // ...
         });
-    firebase.auth().onAuthStateChanged(function(user) {
-        console.log(user);
-    });
 }
 
 // eslint-disable-next-line no-unused-vars
-function signOut(e) {}
+function signOut(e) {
+    firebase.auth().signOut();
+    uid = cart = cartTotal = globalUser = null;
+}
 
 // eslint-disable-next-line no-unused-vars
 function processOrder() {
@@ -259,6 +196,9 @@ function addToCart(product) {
         cartTotal += 5;
         docID.update({
             total_price_cart: cartTotal,
-            cart: firebase.firestore.FieldValue.arrayUnion(product)
+            cart: firebase.firestore.FieldValue.arrayUnion(product),
         });
-    } else window.location.replace('login.html')
+    } else {
+        window.location.replace('login.html');
+    }
+}
