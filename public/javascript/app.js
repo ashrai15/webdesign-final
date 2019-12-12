@@ -25,6 +25,7 @@ let db = firebase.firestore();
 
 
 let   uid, email, cart, cartTotal;
+let globalUser;
 
 // eslint-disable-next-line no-unused-vars
 function buildCart() {
@@ -74,7 +75,9 @@ function buildCart() {
 
 
 firebase.auth().onAuthStateChanged(function(user) {
+	globalUser = user;
 	if (user) {
+		uid = user.uid;
 		// User is signed in.
 		let userdoc = db.collection('user').doc(user.uid);
 
@@ -84,7 +87,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 				email = doc.data().email;
 				cartTotal = doc.data().total_price_cart;
 				cart = doc.data().cart;
-				uid = doc.id;
 			} else 
 				// doc.data() will be undefined in this case
 				console.log('No such document!');
@@ -93,10 +95,11 @@ firebase.auth().onAuthStateChanged(function(user) {
 			console.log('Error getting document:', error);
 		});
 		// ...
-	} else if(window.location =='cart.html' || 
-	window.location == 'checkout.html') 
+	} else if(window.location.href.includes('cart.html') || 
+	window.location.href.includes('checkout.html')){ 
 		window.location.replace('login.html');
-	
+		uid = null;
+	}
 	
 });
 
@@ -146,9 +149,9 @@ function signin(e){
 			let errorMessage = error.message;
     
 			if (errorMessage != null) 
-				alert(errorMessage);
+				console.log(errorMessage);
 			else
-				alert('welcome');
+				window.replace('index.html');
 			
   
 			// ...
@@ -197,3 +200,15 @@ function getInputVal(id) {
 	return document.getElementById(id).value;
 }
 
+// eslint-disable-next-line no-unused-vars
+function addToCart(product) {
+	if (globalUser) {
+		let docID = db.collection('user').doc(uid);
+		console.log(docID.data);
+		cartTotal+=5;
+		docID.update({
+			total_price_cart:cartTotal,
+			cart: firebase.firestore.FieldValue.arrayUnion(product)
+		});
+	}else window.location.replace('login.html');
+}
