@@ -65,4 +65,14 @@ textarea:focus {
     height: 500px;
 }
 
-#animation {}
+#animation1 {
+    animation-timing-function: ease-in;
+}
+
+#animation2 {
+    animation-timing-function: ease;
+}
+
+#animation3 {
+    animation-timing-function: ease-out
+}
