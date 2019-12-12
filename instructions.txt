@@ -20,11 +20,10 @@
     - Include additional client-side validation that colors the fields when it is valid or invalid
     - Feel free to test this – it will e-mail the results to Email if successful
 
-- Embed at least one video (YouTube, Vimeo, LiveStream, Facebook, etc.) that uses Bootstrap's responsive embed code (https://getbootstrap.com/docs/4.3/utilities/embed/ (Links to an external site.)) AND one audio file that uses HTML’s <audio> tag.
+- AND one audio file that uses HTML’s <audio> tag.
 
 - Use at least two different Bootstrap JavaScript components (modals, dropdowns, popovers, etc.) in the normal flow of your site.
 
-- Use a structured data format from https://schema.org/ (Links to an external site.) (Microdata or JSON-LD) to tag an established schema (organization, events, people, places, etc.). Feel free to use https://search.google.com/structured-data/testing-tool/ (Links to an external site.) to validate your schema.
 
 
 Extra Credit:
