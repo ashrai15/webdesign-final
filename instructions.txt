@@ -1,4 +1,1 @@
 - You should include one example of an animation somewhere in the site in a meaningful way. 
-Extra Credit:
-
-- Include an example of parallax scrolling (involves background images shifting up or down as you scroll). This usually works best on your homepage. +5
