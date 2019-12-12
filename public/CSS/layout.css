@@ -39,6 +39,12 @@ footer {
     min-height: 100px;
 }
 
+textarea {
+    margin-top: 10px;
+    height: 100px;
+    width: 95%;
+}
+
 
 /* No media query for 'xs' since this is the default in Bootstrap */
 

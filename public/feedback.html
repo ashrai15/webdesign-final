@@ -37,19 +37,12 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="row">
                 <div class="collapse navbar-collapse col-auto" id="navbarSupportedContent">
                     <ul class="navbar-nav" style="padding-right: 0px; margin-right: 0;">
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html"> About
-                            </a> </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Products
-                            </a>
-                            </a>
+                            <a class="nav-link" href="about.html"> About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="products.html">Products
@@ -60,21 +53,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="prodPaper.html">Paper
-                            </a> </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Pricing
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="feedback.html">Give
-                                us
-                                Feedback </a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactUs.html">Contact
-                                Us </a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login
-                            </a>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -84,10 +62,12 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="feedback.html">Give
                                 us
-                                Feedback </a></li>
+                                Feedback </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contactUs.html">Contact
-                                Us </a></li>
+                                Us </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">Login
                             </a>
@@ -99,82 +79,46 @@
                 </a>
                 <div class="col-4"></div>
             </div>
-            <!-- style="width: 25%;
-                        padding-bottom:10px;
-                        height:25%;
-                        margin:0;" -->
         </nav>
     </header>
 
-    <div class="container">
+    <section>
         <div class="row">
-            <div class="col"></div>
+            <form id="feedbackForm" action="https://www.uu.edu/forms/WBFeedbackAction.cfm" method="POST">
+                <legend>Fill out our Feedback Form.</legend>
+                <fieldset id="hidden">
+                    <input name="Email" type="hidden" hidden>
+                    <input name="Website" type="hidden" hidden>
+                </fieldset>
+                <fieldset id="feedback">
+                    <div class="formRow">
+                        <label for="UserName">Username</label>
+                        <input name="UserName" type="text" placeholder="Username" required maxlength="50">
+                    </div>
+                    <div class="formRow">
+                        <label for="UserEmail">Email Address</label>
+                        <input name="UserEmail" type="email" placeholder="Email" required maxlength="50">
+                    </div>
+                    <div class="formRow">
+                        <label for="UserComments">Comments</label>
+                        <textarea name="UserComments" placeholder="Comments" required maxlength="200"></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit Feedback</button>
+                </fieldset>
+            </form>
         </div>
-    </div>
-    <section class="container ">
-        <div class="row ">
-            <div class="col align-self-center">
-                <form id="feedbackForm" action="https://www.uu.edu/forms/WBFeedbackAction.cfm" method="POST">
-                    <legend>Fill out our Feedback Form.</legend>
-
-                    <input name="Email" id="hiddenemail" type="hidden" hidden />
-                    <input name="Website" class="col " id="hiddenwebsite" type=" hidden " hidden />
-
-                    <div class=" row ">
-                        <label class='col-xl-2 text-center' for=" username ">Username</label>
-                        <input name=" UserName " class="col" id=" username " type=" text " /> <label for="mail" class="col-xl-2 text-center"> E-mail
-                            Please</label>
-                        <input name=" UserEmail " id="mail" type="email " class="col" />
-                    </div>
-
-                    <div class=" row ">
-
-                        <div class="col" style="min-height: 10px;">
-
-                        </div>
-                    </div>
-
-
-
-                    <div class="col align-self-center">
-                        <form id="feedbackForm" action="https://www.uu.edu/forms/WBFeedbackAction.cfm" method="POST">
-                            <legend>Fill out our Feedback Form.</legend>
-
-                            <input name="Email" id="hiddenemail" type="hidden" hidden />
-                            <input name="Website" class="col " id="hiddenwebsite" type=" hidden " hidden />
-
-                            <div class=" row ">
-                                <label class='col-xl-2 text-center' for=" username ">Username</label>
-                                <input name=" UserName " class="col" id=" username " type=" text " /> <label for="mail" class="col-xl-2 text-center"> E-mail
-                                    Please</label>
-                                <input name=" UserEmail " id="mail" type="email " class="col" />
-                            </div>
-
-                            <div class=" row ">
-
-                                <div class="col" style="min-height: 10px;">
-
-                                </div>
-                            </div>
-
-
-                            <div class=" row ">
-                                <label class="col-xl-2 text-center" for=" comments ">Additional Comments</label>
-                                <input class="col" name=" UserComments " id=" comments " type=" textarea " />
-                            </div>
-                            <button class="btn btn-primary" type="submit">Submit Feedback</button>
-                        </form>
-                    </div>
-
-            </div>
     </section>
+
+
+
+
     <footer>
         <hr />
-        <div class=" container ">
-            <div class=" row ">
-                <div class=" col ">Follow us on Social</div>
-                <div class=" col "><a href=" contactUs.html ">Contact
-                        Us</a></div>
+        <div class="container">
+            <div class="row">
+                <div class="col" style="align-content: center;"><a href="https://www.instagram.com/jon.speaks/">Follow us on Instagram!</a></div>
+                <div class="col" style="align-content: center;"><a href="contactUs.html">Contact Us</a>
+                </div>
             </div>
         </div>
     </footer>

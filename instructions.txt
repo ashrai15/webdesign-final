@@ -1,7 +1,4 @@
--unique titles and at least one unique meta tag per page. Organize your files into folders with only your pages appearing at the root level.  For example, create folders for css, js, images, etc.  Remember that there should be no spaces in any folder or file names.
 
-- Write your site with HTML5 structuring tags (at least header, nav, section and footer) and validate with http://validator.w3.org/nu/ (Links to an external site.). Each error will be one point off.
-\no errors other than the feedback form he wants us to write.
 
 - Each page should reach WCAG 2.0 Level AA.  Validate with http://achecker.ca/checker/ (Links to an external site.) and fix Known and Likely Problems. Do you best to fix issues that are labeled as Potential. Each Known error will be one point off.
 
