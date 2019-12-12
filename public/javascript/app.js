@@ -129,10 +129,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         uid = null;
     }
 
-    >>>
-    >>>
-    >
-    b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
+
+
 });
 
 if (document.getElementById('register') != null)
@@ -166,16 +164,12 @@ function createAccount(e) {
     else window.alert('Your passwords must be identical.');
 }
 
-<<
-<<
-<<
-<
+
 HEAD
 
 function signin(e) {
-    e.preventDefault(); ===
-    ===
-    =
+    e.preventDefault();
+
     function signin(e) {
         e.preventDefault();
 
@@ -199,11 +193,7 @@ function signin(e) {
         firebase.auth().onAuthStateChanged(function(user) {
             console.log(user);
         });
-    } >>>
-    >>>
-    >
-    b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
-
+    }
     let email = getInputVal('login-user-name');
     let password = getInputVal('login-user-password');
 
