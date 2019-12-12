@@ -18,20 +18,15 @@ firebase.firestore();
 let db = firebase.firestore();
 // firebase.database();
 
-<<
-<<
-<< < HEAD
-let uid, email, cart, cartTotal; ===
-===
-=
+
+let uid, email, cart, cartTotal;
+
 
 
 
 
 let uid, email, cart, cartTotal;
-let globalUser; >>>
->>>
-> b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
+let globalUser;
 
 // eslint-disable-next-line no-unused-vars
 function buildCart() {
@@ -78,8 +73,8 @@ function buildCart() {
     });
 }
 
-firebase.auth().onAuthStateChanged(function(user) { <<
-    << << < HEAD
+firebase.auth().onAuthStateChanged(function(user) {
+
     if (user) {
         // User is signed in.
         let userdoc = db.collection('user').doc(user.uid);
@@ -136,7 +131,8 @@ firebase.auth().onAuthStateChanged(function(user) { <<
 
     >>>
     >>>
-    > b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
+    >
+    b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
 });
 
 if (document.getElementById('register') != null)
@@ -172,7 +168,9 @@ function createAccount(e) {
 
 <<
 <<
-<< < HEAD
+<<
+<
+HEAD
 
 function signin(e) {
     e.preventDefault(); ===
@@ -203,7 +201,8 @@ function signin(e) {
         });
     } >>>
     >>>
-    > b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
+    >
+    b02d6ccf4ca59c204aae8b7a251dc8c60a3949f3
 
     let email = getInputVal('login-user-name');
     let password = getInputVal('login-user-password');
@@ -272,4 +271,4 @@ function addToCart(product) {
             total_price_cart: cartTotal,
             cart: firebase.firestore.FieldValue.arrayUnion(product)
         });
-    } else window.location.replace('login.html');
+    } else window.location.replace('login.html')
