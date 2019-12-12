@@ -51,17 +51,17 @@ textarea:focus {
 }
 
 .parallax1 {
-    background-image: url(/images/drone-photo-1.jpeg);
+    background-image: url(../images/drone-photo-1.jpeg);
     height: 500px;
 }
 
 .parallax2 {
-    background-image: url(/images/holiday-card-1.jpg);
+    background-image: url(../images/holiday-card-1.jpg);
     height: 500px;
 }
 
 .parallax3 {
-    background-image: url(/images/holiday-card-2.jpg);
+    background-image: url(../images/holiday-card-2.jpg);
     height: 500px;
 }
 
