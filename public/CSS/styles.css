@@ -23,11 +23,11 @@ audio {
 }
 
 input:invalid {
-    background: rgb(255, 232, 233) url(/public/images/rb_invalid.png) bottom right/contain no-repeat;
+    background: rgb(255, 232, 233) url(./images/rb_invalid.png) bottom right/contain no-repeat;
 }
 
 input:focus:valid {
-    background: rgb(220, 255, 220) url(/public/images/rb_valid.png) bottom right/contain no-repeat;
+    background: rgb(220, 255, 220) url(./images/rb_valid.png) bottom right/contain no-repeat;
 }
 
 input:focus,
@@ -51,16 +51,16 @@ textarea:focus {
 }
 
 .parallax1 {
-    background-image: url(/public/images/drone-photo-1.jpeg);
+    background-image: url(/images/drone-photo-1.jpeg);
     height: 500px;
 }
 
 .parallax2 {
-    background-image: url(/public/images/holiday-card-1.jpg);
+    background-image: url(/images/holiday-card-1.jpg);
     height: 500px;
 }
 
 .parallax3 {
-    background-image: url(/public/images/holiday-card-2.jpg);
+    background-image: url(/images/holiday-card-2.jpg);
     height: 500px;
 }
