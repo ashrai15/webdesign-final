@@ -24,6 +24,9 @@ let globalUser;
 
 // eslint-disable-next-line no-unused-vars
 function buildCart() {
+    while (cart == null) {
+        await
+    }
     cart.forEach((element) => {
         console.log('Element' + element);
 
@@ -35,7 +38,7 @@ function buildCart() {
         let inhtml = ` <li>
                     <div class="card">
                         <div class="row">
-                            <img src="../images/cards-icon-red.png" alt=""
+                            <img src="./images/cards-icon-red.png" alt=""
                                 srcset="" class="col-2">
                             <div class="col">
                                 <div class="row card-title">
@@ -81,6 +84,9 @@ firebase.auth().onAuthStateChanged(function(user) {
                     cartTotal = doc.data().total_price_cart;
                     cart = doc.data().cart;
                     uid = doc.id;
+                    if (document.getElementById('current-cart') != null) {
+                        buildCart();
+                    }
                 } else
                 // doc.data() will be undefined in this case
                     console.log('No such document!');
@@ -143,7 +149,7 @@ function signin(e) {
             let errorMessage = error.message;
 
             if (errorMessage != null) alert(errorMessage);
-            else window.replace('index.html');
+            else window.location.replace('index.html');
 
             // ...
         });

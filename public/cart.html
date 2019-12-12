@@ -1,157 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!--Required meta tags-->
-        <meta charset="utf-8" />
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!--Student-made CSS-->
-        <link rel="stylesheet" href="CSS/layout.css" media="screen"/>
-        <link rel="stylesheet" href="CSS/styles.css" media="screen"/>
-        <link rel="stylesheet" href="CSS/print.css" media="print"/>
+    <!--Student-made CSS-->
+    <link rel="stylesheet" href="CSS/layout.css" media="screen" />
+    <link rel="stylesheet" href="CSS/styles.css" media="screen" />
+    <link rel="stylesheet" href="CSS/print.css" media="print" />
 
 
-        <!--Bootstrap CSS-->
-        <!-- <link rel="stylesheet"
+    <!--Bootstrap CSS-->
+    <!-- <link rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous" /> -->
-        <link rel="stylesheet" href="CSS/bootstrap_css_edit.css">
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script
-            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <link rel="stylesheet" href="CSS/bootstrap_css_edit.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
                  https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script
-            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
-        <script
-            src="https://www.gstatic.com/firebasejs/7.4.0/firebase-performance.js"></script>
-        <script
-            src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
-        <script
-            src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
-        <script
-            src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
-        <script src="https://js.stripe.com/v3/"></script>
-        <script src="javascript/app.js"></script>
-        <script defer src="javascript/stripe.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-performance.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script defer src="javascript/app.js"></script>
+    <script defer src="javascript/stripe.js"></script>
 
-        <title>Cart</title>
-    </head>
+    <title>Cart</title>
+</head>
 
-    <body onload="buildCart()">
-            <header>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="images/logo.png" class="img-thumbnail"
-                                alt="Logo" />
-                        </a>
-                        <button class="navbar-toggler" type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="row">
-                            <div class="collapse navbar-collapse col-auto"
-                                id="navbarSupportedContent">
-                                <ul class="navbar-nav"
-                                    style="padding-right: 0px; margin-right: 0;">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="about.html"> About
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="products.html">Products
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="prodCardStock.html">Cardstock </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="prodPaper.html">Paper
-                                        </a></li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pricing.html">Pricing
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="feedback.html">Give
-                                            us
-                                            Feedback </a></li>
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="contactUs.html">Contact
-                                            Us </a></li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="login.html">Login
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a class=" col-1" href="cart.html"
-                                style="margin:0;padding:0; width:100%;">
-                                <img src="images/shopping-basket-icon-614x460.png"
-                                    alt="Image of a black shopping cart."
-                                    class="nav-link" style="width: 100%;padding: 0;">
+<body onload="buildCart()">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" class="img-thumbnail" alt="Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="row">
+                <div class="collapse navbar-collapse col-auto" id="navbarSupportedContent">
+                    <ul class="navbar-nav" style="padding-right: 0px; margin-right: 0;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"> About
                             </a>
-                            <div class="col-4"></div>
-                        </div>
-                        <!-- style="width: 25%;
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="prodCardStock.html">Cardstock </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="prodPaper.html">Paper
+                            </a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html">Give
+                                us
+                                Feedback </a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactUs.html">Contact
+                                Us </a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class=" col-1" href="cart.html" style="margin:0;padding:0; width:100%;">
+                    <img src="images/shopping-basket-icon-614x460.png" alt="Image of a black shopping cart." class="nav-link" style="width: 100%;padding: 0;">
+                </a>
+                <div class="col-4"></div>
+            </div>
+            <!-- style="width: 25%;
                         padding-bottom:10px;
                         height:25%;
                         margin:0;" -->
-                    </nav>
-                </header>
-        
-
-        <section class="container">
+        </nav>
+    </header>
 
 
-            <h1 id="cart-greeting">
+    <section class="container">
 
-            </h1>
 
-            <ul id="current-cart"
-                style="list-style-type: none;padding:0;margin:0;">
+        <h1 id="cart-greeting">
 
-            </ul>
+        </h1>
 
-            <p id="total-price"></p>
-            <a href="checkout.html" class="btn btn-primary">Continue to
-                checkout</a>
+        <ul id="current-cart" style="list-style-type: none;padding:0;margin:0;">
 
-        </section>
-        <footer>
-            <hr />
-            <div class="container">
-                <div class="row">
-                    <div class="col">Follow us on Social</div>
-                    <div class="col"><a href="contactUs.html">Contact Us</a>
-                    </div>
+        </ul>
+
+        <p id="total-price"></p>
+        <a href="checkout.html" class="btn btn-primary">Continue to
+            checkout</a>
+
+    </section>
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="row">
+                <div class="col">Follow us on Social</div>
+                <div class="col"><a href="contactUs.html">Contact Us</a>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <!--Optional JavaScript-->
-        <!--jQuery first, then Popper.js, then Bootstrap JS-->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    </body>
+    <!--Optional JavaScript-->
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 
 </html>
