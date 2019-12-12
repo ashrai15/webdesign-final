@@ -14,3 +14,10 @@ img#ownerpic {
 img#ownerpic:hover {
     transform: rotate(360deg);
 }
+
+audio {
+    box-shadow: (rgb(91, 113, 100) 8px 8px 15px);
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+}
