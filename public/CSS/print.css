@@ -1,5 +1,10 @@
 footer,
-nav,
-aside {
+aside,
+iframe,
+audio {
     display: none;
+}
+
+header>nav>a>img {
+    display: block;
 }
